@@ -23,7 +23,19 @@
       <img src="public/images/kyanzlogo.png" alt="KYANZ" class="brand-logo" />
     </div>
 
-    <nav class="nav">
+    <<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<nav class="nav" id="navMenu">
+  <a href="#collection">Collection</a>
+  <a href="#scents">Scents</a>
+  <a href="#campaign">Campaign</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#about">About</a>
+  <a href="#order" class="nav-cta">Order</a>
+</nav>
+>
       <a href="#collection">Collection</a>
       <a href="#scents">Scents</a>
       <a href="#campaign">Campaign</a>
@@ -251,5 +263,23 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+  const btn = document.getElementById("navToggle");
+  const menu = document.getElementById("navMenu");
+
+  btn.addEventListener("click", () => {
+    const open = menu.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  menu.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      menu.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
+  
 </body>
 </html>

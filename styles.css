@@ -200,6 +200,11 @@ body {
   z-index: 0;
 }
 
+.hero-bg-video {
+  pointer-events: none; /* prevents iOS from pausing video */
+}
+
+
 /* Keep overlay + content above video */
 .hero-overlay {
   position: absolute;

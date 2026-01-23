@@ -179,6 +179,61 @@ body {
   border-radius: 20px;
 }
 
+/* ===== NEW: Scent Editions ===== */
+.scent-section {
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+.scent-section .section-subtitle {
+  color: rgba(229,231,235,0.75);
+}
+
+.scent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.scent-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #020617;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+  transform: translateY(0);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scent-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.45);
+}
+
+.scent-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.scent-meta {
+  padding: 14px 14px 16px;
+}
+
+.scent-meta h3 {
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.scent-meta p {
+  font-size: 0.85rem;
+  color: rgba(229,231,235,0.75);
+}
+
 /* ===== Lifestyle ===== */
 .lifestyle-grid {
   display: grid;
@@ -265,12 +320,29 @@ body {
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 960px) {
+  .scent-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .scent-card img {
+    height: 320px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.1rem;
   }
-
   .about-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .scent-grid {
+    grid-template-columns: 1fr;
+  }
+  .scent-card img {
+    height: 360px;
   }
 }

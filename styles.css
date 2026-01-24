@@ -440,3 +440,11 @@ body {
     height: 360px;
   }
 }
+
+
+@media (max-width: 960px){
+  .scent-video { height: 320px; }
+}
+@media (max-width: 480px){
+  .scent-video { height: 360px; }
+}

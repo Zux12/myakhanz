@@ -53,7 +53,15 @@
     font-size: 12px;
     line-height: 1;
   }
-</style>
+
+  /* Remove white card background ONLY for WhatsApp step */
+.order-step-whatsapp {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+  </style>
 
 </head>
 
@@ -309,8 +317,8 @@
     <h2 class="section-title">How to Order</h2>
 
     <div class="order-steps">
-      <div>1. Choose your scent</div> <br>
-<div>
+      <div>1. Choose your scent</div> 
+<div class="order-step-whatsapp">
   <a
     href="https://wa.me/60136282570?text=Hello%20KYANZ%20Team%20%F0%9F%91%8B%0A%0AI%20would%20like%20to%20place%20an%20order.%0A%0AName%3A%0ASelected%20Scent%3A%0AQuantity%3A%0ADelivery%20Address%3A%0A%0AThank%20you%20%F0%9F%98%8A"
     target="_blank"
@@ -319,7 +327,8 @@
   >
     2. Message us on WhatsApp
   </a>
-</div> <br>
+</div>
+
 
 
       <div>3. Confirm payment & delivery</div>
